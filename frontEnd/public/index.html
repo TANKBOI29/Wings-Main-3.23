@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Database</title>
+        <link rel="stylesheet" href="css/style.css">
+        <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    </head>
+    <body class="dashboard">
+        <div class="sidebar">
+            <h2>Dashboard</h2>
+            <ul>
+                <li><a href="#">🏠 Home</a></li>
+                <li><a href="#">📋 Forms</a></li>
+                <li><a href="#">📊 Responses</a></li>
+                <li><a href="#">⚙️ Settings</a></li>
+            </ul>
+        </div>
+    
+        <div class="main-content">
+            <div class="header">
+                <h1>Welcome Back</h1>
+                <button class="create-btn" onclick="openFormModal()">+ Create New Form</button>
+            </div>
+    
+            <div class="card-container" id="card-container">
+                <!-- Forms will be dynamically added here -->
+            </div>
+        </div>
+
+        <div class="loading-wrapper">
+            <img src="/frontEnd/main/images/logo.png" height="300px" class="loading-img">
+        </div>
+
+        <script> 
+            $(window).on("load", function(){
+                setTimeout(function(){
+                    $(".loading-wrapper").fadeOut("slow");
+                }, 3000); // 3000 milliseconds = 3 seconds
+            });
+        </script>
+    </body>
+</html>
